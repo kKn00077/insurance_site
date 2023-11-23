@@ -37,10 +37,10 @@ export const Fqa = () => {
                 animate={mainControl}
                 transition={{ delay: 0.4 }}
             >
-                <Accordion title="자주 물어보는 질문 1" content={defaultContent} />
-                <Accordion title="자주 물어보는 질문 2" content={defaultContent} />
-                <Accordion title="자주 물어보는 질문 3" content={defaultContent} />
-                <Accordion title="자주 물어보는 질문 4" content={defaultContent} />
+                <Accordion title="계속 문자가 오나요?" content="아닙니다." />
+                <Accordion title="보험 보장분석을 하면 돈이 드나요?" content="아닙니다. 분석만 도와드립니다." />
+                <Accordion title="보험 가입 강요가 있나요?" content="없습니다. 언제나 필요하신 분만 가입해드립니다." />
+                <Accordion title="받은 분석을 다시 보려는데 확인이 안됩니다." content="3일이 지나면, 모바일 분석을 보실 수 없습니다." />
             </motion.div>
         </div>
     );

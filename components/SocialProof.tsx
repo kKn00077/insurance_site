@@ -8,8 +8,7 @@ export const SocialProof = () => {
     const [dummyData, setDummyData] = useState([
         {
             info: "김옥자 여(54세, 가정주부)",
-            comment: `Lorem ipsum dolor sit amet, Lorem ipsum
-                    \n dolor sit amet`,
+            comment: `요즘같은 인플레이션에 비용절감 그리고 노후준비까지 해서 걱정없게 됐어요. 감사합니다!`,
         },
         {
             info: "박경자 여(64세, 가정주부)",

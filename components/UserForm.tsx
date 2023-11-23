@@ -54,6 +54,15 @@ export const UserForm = () => {
                     <input type="checkbox" />
                     <p className="text-[#4B4B4B] text-xs">개인 정보 수집 동의 (필수)</p>
                 </div>
+                <div className="flex gap-2 text-red-500">
+                    *
+                    <p className="text-[10px]">
+                        수집목적 - 내 보험분석/컨설팅<br></br>
+                        개인정보를 제공받는 자 - 23058078 PA<br></br>
+                        필수항목 - 이름, 생년월일, 전화번호<br></br>
+                        보유이용기간 - 3개월
+                    </p>
+                </div>
                 <button className="w-[256px] rounded-2xl bg-[#1C8549] py-2 text-white">
                     상담 신청하기
                 </button>
