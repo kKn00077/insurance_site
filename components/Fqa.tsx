@@ -1,5 +1,5 @@
 "use client";
-import { motion, useAnimation, useInView } from "framer-motion";
+import { AnimatePresence, motion, useAnimation, useInView } from "framer-motion";
 import ArrowIcon from "@/public/arrow_down.svg";
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
@@ -31,7 +31,7 @@ export const Fqa = () => {
                 자주 물어보시는 질문
             </motion.h1>
             <motion.div
-                className="flex flex-col items-center gap-6"
+                className="flex flex-col items-center gap-3"
                 variants={{ hidden: { opacity: 0, y: 20 }, visible: { opacity: 1, y: 0 } }}
                 initial="hidden"
                 animate={mainControl}
@@ -55,7 +55,7 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
             }}
             className="w-[320px]"
         >
-            <div className="flex justify-between">
+            <div className="flex justify-between bg-white rounded-xl px-4 py-2 mb-2">
                 <p className="text-sm">{title}</p>
                 <Image
                     width={24}
@@ -69,9 +69,31 @@ const Accordion = ({ title, content }: { title: string; content: string }) => {
                     }
                 />
             </div>
-            <div className={isClicked ? "block text-sm transition-all duration-100" : "hidden"}>
+            
+            {/* <motion.div className={isClicked ? "block text-sm font-bold transition-all duration-100 px-4 py-2" : "hidden"}>
                 {content}
-            </div>
+            </motion.div> */}
+
+            <AnimatePresence initial={false}>
+
+                {
+                    isClicked && (
+                        <motion.div
+                            className="text-sm font-bold px-4"
+                            key="content" initial="collapsed"
+                            animate="open" exit="collapsed"
+                            variants={{
+                                open: { opacity: 1, height: "auto"},
+                                collapsed: { opacity: 0, height: 0 }
+                            }}
+                            transition={{ duration: 0.5, ease: [0.04, 0.62, 0.23, 0.98] }}
+                        >
+                            {content}
+                        </motion.div>
+                    )
+                }
+            </AnimatePresence>
+
         </div>
     );
 };
