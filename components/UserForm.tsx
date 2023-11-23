@@ -29,22 +29,22 @@ export const UserForm = () => {
             <div className="flex flex-col justify-center items-center gap-4">
                 <div>
                     <input
-                        type="text"
-                        placeholder="성함"
+                        type="text" required
+                        placeholder="* 성함"
                         className="w-[256px] h-[40px] rounded-lg px-4 py-1 border border-[#969696]"
                     />
                 </div>
                 <div>
                     <input
-                        type="date"
-                        placeholder="생년원일"
+                        type="date" required
+                        data-placeholder="* 생년월일"
                         className="w-[256px] h-[40px] rounded-lg px-4 py-1 border border-[#969696]"
                     />
                 </div>
                 <div>
                     <input
-                        type="tel"
-                        placeholder="전화번호"
+                        type="tel" required
+                        placeholder="* 전화번호"
                         className="w-[256px] h-[40px] rounded-lg px-4 py-1 border border-[#969696]"
                     />
                 </div>
