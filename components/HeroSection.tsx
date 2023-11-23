@@ -22,13 +22,14 @@ export const HeroSection = () => {
                 >
                     나이 때문에 많이 나오는 보험료도 한 방에 정리
                 </motion.p>
-                <motion.button
-                    className={`rounded-2xl px-9 py-2 text-white bg-[#1c8549] hover:bg-[#215236]`}
+                <motion.a
+                    href="#form"
+                    className={`text-center rounded-2xl px-9 py-2 text-white bg-[#1c8549] hover:bg-[#215236]`}
                     {...fadeIn}
                     transition={{ delay: 0.7 }}
                 >
-                    <a href="#form">상담 신청 하기</a>
-                </motion.button>
+                    <p>상담 신청 하기</p>
+                </motion.a>
             </div>
         </div>
     );
