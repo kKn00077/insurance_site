@@ -37,7 +37,7 @@ export const Benefit = () => {
                     transition={{ delay: 0.25 }}
                 >
                     <Image width={24} height={24} src={CheckIcon} alt="check_icon" />
-                    <p className="w-[256px] text-center">Lorem ipsum dolor sit amet</p>
+                    <p className="w-[256px] text-center">받지 못한 놓친 기회 무료로 찾기</p>
                 </motion.div>
                 <motion.div
                     className=" rounded-2xl px-4 py-2 bg-white flex gap-2"
@@ -47,7 +47,7 @@ export const Benefit = () => {
                     transition={{ delay: 0.5 }}
                 >
                     <Image width={24} height={24} src={DoubleIcon} alt="check_icon" />
-                    <p className="w-[256px] text-center">Lorem ipsum dolor sit amet</p>
+                    <p className="w-[256px] text-center">각종 중요 이슈 정보 혜택</p>
                 </motion.div>
                 <motion.div
                     className=" rounded-2xl px-4 py-2 bg-white flex gap-2"
@@ -57,7 +57,7 @@ export const Benefit = () => {
                     transition={{ delay: 0.75 }}
                 >
                     <Image width={24} height={24} src={PlusIcon} alt="check_icon" />
-                    <p className="w-[256px] text-center">Lorem ipsum dolor sit amet</p>
+                    <p className="w-[256px] text-center">상상하지 못한 건강검진 혜택</p>
                 </motion.div>
             </div>
         </div>
