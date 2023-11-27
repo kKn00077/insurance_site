@@ -22,7 +22,7 @@ export const SocialProof = () => {
 
     useEffect(() => {
         const timer = setInterval(() => {
-            setPage(page + 1);
+            setPage((page) => page + 1);
         }, 5000);
 
         return () => {
