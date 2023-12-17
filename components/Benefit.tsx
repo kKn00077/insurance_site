@@ -37,7 +37,7 @@ export const Benefit = () => {
                     transition={{ delay: 0.25 }}
                 >
                     <Image width={24} height={24} src={CheckIcon} alt="check_icon" />
-                    <p className="w-[256px] text-center">받지 못한 놓친 기회 무료로 찾기</p>
+                    <p className="w-[256px] text-center">보험 수령 가능성 체크</p>
                 </motion.div>
                 <motion.div
                     className=" rounded-2xl px-4 py-2 bg-white flex gap-2"

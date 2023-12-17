@@ -12,15 +12,15 @@ export const HeroSection = () => {
                     {...fadeIn}
                     transition={{ delay: 0.2 }}
                 >
-                    보험 한 개로 명품 가방
-                    <br /> 한 박스 받아가세요
+                    나이와 함께 올라가는 보험료
+                    <br /> 한 방에 정리하세요!
                 </motion.h1>
                 <motion.p
                     className={`text-center mt-2 text-sm mb-8 text-[#4B4B4B]`}
                     {...fadeIn}
                     transition={{ delay: 0.5 }}
                 >
-                    나이 때문에 많이 나오는 보험료도 한 방에 정리
+                    보험은 주식과 코인처럼 계속 점검이 필요합니다
                 </motion.p>
                 <motion.a
                     href="#form"

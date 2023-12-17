@@ -27,7 +27,7 @@ export const UserForm = () => {
         >
             <p className="mb-4">상담 신청서</p>
             <div className="flex flex-col justify-center items-center gap-4">
-                <div>
+                {/* <div>
                     <input
                         type="text" required
                         placeholder="* 성함"
@@ -40,7 +40,7 @@ export const UserForm = () => {
                         data-placeholder="* 생년월일"
                         className="w-[256px] h-[40px] rounded-lg px-4 py-1 border border-[#969696]"
                     />
-                </div>
+                </div> */}
                 <div>
                     <input
                         type="tel" required
@@ -50,19 +50,10 @@ export const UserForm = () => {
                 </div>
             </div>
             <div className="flex flex-col gap-2">
-                <div className="flex gap-2">
+                {/* <div className="flex gap-2">
                     <input type="checkbox" />
                     <p className="text-[#4B4B4B] text-xs">개인 정보 수집 동의 (필수)</p>
-                </div>
-                <div className="flex gap-2 text-red-500">
-                    *
-                    <p className="text-[10px]">
-                        수집목적 - 내 보험분석/컨설팅<br></br>
-                        개인정보를 제공받는 자 - 김세화 분석 설계사<br></br>
-                        필수항목 - 이름, 생년월일, 전화번호<br></br>
-                        보유이용기간 - 3개월
-                    </p>
-                </div>
+                </div> */}
                 <button className="w-[256px] rounded-2xl bg-[#1C8549] py-2 text-white">
                     상담 신청하기
                 </button>

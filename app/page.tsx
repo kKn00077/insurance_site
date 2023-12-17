@@ -9,8 +9,8 @@ export default function Home() {
                 <HeroSection />
                 <SocialProof />
                 <Benefit />
-                <Fqa />
                 <UserForm />
+                <Fqa />
             </div>
         </div>
     );
