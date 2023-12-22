@@ -2,9 +2,11 @@
 
 import { motion, useAnimation, useInView } from "framer-motion";
 import { FormEvent, useEffect, useRef, useState } from "react";
+import { Loading } from ".";
 
 export const UserForm = () => {
     // const [isChecked, setIsChecked] = useState(false);
+    const [loading, setLoading] = useState(false);
     const ref = useRef(null);
     const isInView = useInView(ref);
     const mainControl = useAnimation();
@@ -19,12 +21,17 @@ export const UserForm = () => {
         event.preventDefault();
 
         try {
+
+            setLoading(true)
+
             const formData = new FormData(event.currentTarget)
             const response = await fetch('/api/mail', {
               method: 'POST',
               body: formData,
             })
        
+            setLoading(false);
+
             const data = await response.json();
 
             if (!response.ok) {
@@ -48,6 +55,7 @@ export const UserForm = () => {
             id="form"
             onSubmit={onSubmit}
         >
+            { loading && <Loading/> }
             <p className="mb-4">상담 신청서</p>
             <div className="flex flex-col justify-center items-center gap-4">
                 {/* <div>
