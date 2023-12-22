@@ -7,8 +7,8 @@ import { backgroundColor } from "@/style";
 const notoKR = Noto_Sans_KR({ weight: ["500", "700"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
-    title: "보험 관련 페이지",
-    description: "보험 관련 페이지입니다.",
+    title: "보험 문의 페이지",
+    description: "보험 문의 페이지입니다.",
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

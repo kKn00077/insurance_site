@@ -1,10 +1,10 @@
 "use client";
 
 import { motion, useAnimation, useInView } from "framer-motion";
-import { useEffect, useRef, useState } from "react";
+import { FormEvent, useEffect, useRef, useState } from "react";
 
 export const UserForm = () => {
-    const [isChecked, setIsChecked] = useState(false);
+    // const [isChecked, setIsChecked] = useState(false);
     const ref = useRef(null);
     const isInView = useInView(ref);
     const mainControl = useAnimation();
@@ -15,8 +15,30 @@ export const UserForm = () => {
         }
     }, [isInView, mainControl]);
 
+    const onSubmit = async (event: FormEvent<HTMLFormElement>) => {
+        event.preventDefault();
+
+        try {
+            const formData = new FormData(event.currentTarget)
+            const response = await fetch('/api/mail', {
+              method: 'POST',
+              body: formData,
+            })
+       
+            const data = await response.json();
+
+            if (!response.ok) {
+                throw new Error(data.msg || '서버 요청 실패');
+            } else {
+                alert(data.msg);
+            }
+        } catch (error) {
+            alert(error);
+        }
+    }
+
     return (
-        <motion.div
+        <motion.form
             ref={ref}
             className="flex flex-col justify-center items-center mt-[180px] w-[320px] py-8 px-8 rounded-2xl gap-10 bg-white shadow-xl"
             variants={{ hidden: { opacity: 0, y: 40 }, visible: { opacity: 1, y: 0 } }}
@@ -24,6 +46,7 @@ export const UserForm = () => {
             animate={mainControl}
             transition={{ duration: 0.8 }}
             id="form"
+            onSubmit={onSubmit}
         >
             <p className="mb-4">상담 신청서</p>
             <div className="flex flex-col justify-center items-center gap-4">
@@ -43,7 +66,8 @@ export const UserForm = () => {
                 </div> */}
                 <div>
                     <input
-                        type="tel" required
+                        type="tel"
+                        name="phone"
                         placeholder="* 전화번호"
                         className="w-[256px] h-[40px] rounded-lg px-4 py-1 border border-[#969696]"
                     />
@@ -58,6 +82,6 @@ export const UserForm = () => {
                     상담 신청하기
                 </button>
             </div>
-        </motion.div>
+        </motion.form>
     );
 };
