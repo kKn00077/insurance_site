@@ -28,7 +28,7 @@ export async function POST(req: NextRequest) {
             status: 200,
         })
     }).catch((error) => {
-        return NextResponse.json({ msg: '서버 오류로 인해 메일 발송이 실패했습니다.\n나중에 다시 시도해주세요.' }, {
+        return NextResponse.json({ msg: error.message }, {
             status: 500,
         });
     });
